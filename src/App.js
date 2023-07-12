@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import s from './App.module.css';
+import BonusesContainer from './Components/Bonuses/BonusesContainer';
+import FakeElement from './Components/FakeElement/FakeElement';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          [eq] <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={s.app}>
+      <Routes>
+        <Route path='/' element={<BonusesContainer/>}/>
+        <Route path='/info' element={<FakeElement/>}/>
+        <Route path='/home' element={<FakeElement/>}/>
+        <Route path='/fullbonuses' element={<FakeElement/>}/>
+      </Routes>
     </div>
   );
 }
