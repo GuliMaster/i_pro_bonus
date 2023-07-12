@@ -1,3 +1,14 @@
 .app {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
 
+@media screen and (max-width: 375px) {
+    .app {
+        height: 350px;
+    }
 }
